@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>learning JavaScript</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
@@ -60,6 +61,40 @@
 		}
 	</script> -->
 
+	<!-- Validasi FORM -->
+	<!-- <form action="" method="POST" onsubmit="validasi()">
+		<label for="">Nama</label><br>
+		<input type="text" id="name"><br>
+		<label for="">NoHP</label><br>
+		<input type="text" id="nohp"><br>
+		<label for="">Alamat</label><br>
+		<textarea name="" id="alamat" cols="30" rows="5"></textarea><br>
+		<button type="submi">kirim</button>
+	</form>
+	<script>
+		function validasi(){
+			var nama = document.getElementById('name').value;
+			var nohp = document.getElementById('nohp').value;
+			var alamat = document.getElementById('alamat').value;
 
+			if(nama !='' && nohp != '' && alamat != ''){
+				return true;
+			}else{
+				alert("Data Harus Diisi Semua");
+			}
+		}
+	</script> -->
+	
+	<!-- Aksi Reaksi JQUERY -->
+	<button id="tombol">Klik</button><br>
+	<img src="http://static1.magazine.lorealprofessionnel.com/articles/6/51/6/@/1101-eva-green-on-golden-globes-2016-red-carp-opengraph_1200-1.jpg" alt="" class="gambar" width="420px">
+	
+	<script>
+		$(document).ready(function(){
+			$('#tombol').click(function(){
+				$('.gambar').toggle();
+			});
+		});
+	</script>
 </body>
 </html>	
