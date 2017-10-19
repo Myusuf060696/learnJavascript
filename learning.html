@@ -4,6 +4,20 @@
 	<meta charset="UTF-8">
 	<title>learning JavaScript</title>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<style>
+		#kotak{
+			width: 350px;
+			height: 350px;
+			background-color: blue;
+		}
+		#gambar1{
+			display: none;
+		}
+		#gambar2{
+			display: none;
+		}
+	</style>
 </head>
 <body>
 
@@ -86,17 +100,53 @@
 	</script> -->
 	
 	<!-- Aksi Reaksi JQUERY -->
-	<button id="tombol">Klik</button><br>
-	<img src="http://static1.magazine.lorealprofessionnel.com/articles/6/51/6/@/1101-eva-green-on-golden-globes-2016-red-carp-opengraph_1200-1.jpg" alt="" class="gambar" width="420px">
+	<!-- <button id="tombol">Klik</button><br> -->
+	<!-- <div id="kotak">
+		
+	</div>	 -->
+	<!-- <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/12410523_10201262135712861_4923231876252319392_n.jpg?oh=1ce21b14eba5d4a52147370e5c565073&oe=5A884CD0" alt="" class="gambar" width="420px">
+	<br>
+	<button id="tombol2">Double Klik</button><br>
+	<img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/12410523_10201262135712861_4923231876252319392_n.jpg?oh=1ce21b14eba5d4a52147370e5c565073&oe=5A884CD0" alt="" id="gambar2" width="420px">
 	
 	<script>
 		$(document).ready(function(){
 			$('#tombol').click(function(){
-				$('.gambar').toggle();
+				$('.gambar').slideToggle("slow");
+			});
+			$('#tombol2').dblclick(function(){
+				$('#gambar2').toggle();
+			});
+		});
+	</script> -->
+	
+
+	<!-- CallBack Function -->
+	<!-- <button id="tombol">Klik</button><br>
+	<img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/12410523_10201262135712861_4923231876252319392_n.jpg?oh=1ce21b14eba5d4a52147370e5c565073&oe=5A884CD0" alt="" id="gambar1" width="400px"><br>
+	<img src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/13239229_10201732415629565_2859393896823854894_n.jpg?oh=a0f4d04d06ab411002d794188910bfb1&oe=5A8397C4" alt="" id="gambar2" width="400px">
+
+	<script>
+		$(document).ready(function(){
+			$('#tombol').click(function(){
+				$('#gambar1').fadeIn(800,function(){
+					$('#gambar2').show();
+				});
+			});
+		});
+	</script> -->
+	
+	<!-- Chaining Function -->
+	<button id="tombol">Klik</button><br>
+	<img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/12410523_10201262135712861_4923231876252319392_n.jpg?oh=1ce21b14eba5d4a52147370e5c565073&oe=5A884CD0" alt="" id="gambar1" width="400px"><br>
+	<img src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/13239229_10201732415629565_2859393896823854894_n.jpg?oh=a0f4d04d06ab411002d794188910bfb1&oe=5A8397C4" alt="" id="gambar2" width="400px">
+
+	<script>
+		$(document).ready(function(){
+			$('#tombol').click(function(){
+				$('#gambar2').fadeIn(800).slideUp(900).slideDown(900);
 			});
 		});
 	</script>
-
-	
 </body>
 </html>	
