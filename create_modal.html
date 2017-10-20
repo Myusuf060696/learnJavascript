@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create Modal</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<style>
+		#modal-kotak{
+			margin: 10% 30% 30% 30%;
+			padding: 30px;
+			background: orange;
+			width: 500px;
+			height: 200px;
+			position: absolute;
+			position: fixed;
+			z-index: 100;
+			display: none;
+		}
+		#atas{
+			font-size: 16pt;
+			padding: 20px;
+			height: 70%;
+		}
+		#bawah{
+			/*background : #fff;*/
+		}
+		#tombol-tutup{
+			background: #e74c3c;
+		}
+		#tombol-tutup, #tombol{
+			height: 30px;
+			width: 100px;
+			color: #fff;
+			border: 0px;
+		}
+		#tombol{
+			background: #e74c3c;
+		}
+		#bg{
+			/*opacity: 0.60;*/
+			position: absolute;
+			display: none;
+			position: fixed;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			z-index: 99;
+			opacity: 0.8;
+		}
+
+	</style>
+</head>
+<body>
+	<button id="tombol">Klik</button>
+
+	<div id="bg"></div>
+	<div id="modal-kotak">
+		<div id="atas">
+			Hallo wkwkwk
+		</div>
+		<div id="bawah">
+			<button id="tombol-tutup">Close</button>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('#tombol').click(function(){
+				$('#bg, #modal-kotak').fadeIn("slow");
+			});
+			$('#tombol-tutup').click(function(){
+				$('#bg, #modal-kotak').fadeOut("slow");
+			});
+		});
+	</script>
+</body>
+</html>
